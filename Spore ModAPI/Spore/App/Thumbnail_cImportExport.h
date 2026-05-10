@@ -17,23 +17,22 @@ namespace App
 
 		bool EncodePNG(IO::IStream* outputStream, int mode);
 
-		/* 00h */	eastl::vector<int> field_0;
-		/* 14h */	int field_14;
-		/* 18h */	int field_18;
-		/* 1Ch */	int field_1C;  // not initialized
-		/* 20h */	bool field_20;
-		/* 24h */	int field_24;
-		/* 28h */	int field_28;  // -1
-		/* 2Ch */	int field_2C;  // -1
-		/* 30h */	int field_30;
-		/* 34h */	int field_34;
-		/* 38h */	int field_38;
-		/* 3Ch */	int field_3C;
-		/* 40h */	int field_40;
-		/* 44h */	int field_44;
-		/* 48h */	int field_48;
-		/* 4Ch */	int field_4C;  // 8
-		/* 50h */	int field_50;
+		/* 00h */	eastl::vector<int> mPixelBuf;
+		/* 14h */	uint32_t mnImageWidth;
+		/* 18h */	uint32_t mnImageHeight;
+		/* 1Ch */	uint32_t mnImagePixelBytes;  // not initialized
+		/* 20h */	bool mbAlpha;
+		/* 24h */	int mState;
+		/* 28h */	uint64_t mnHash;  // -1
+		/* 30h */	uint32_t mnStreamHash;
+		/* 34h */	uint32_t mnTotalSize;
+		/* 38h */	uint32_t mnTotalRead;
+		/* 3Ch */	uint32_t mnCurOffset;
+		/* 40h */	uint32_t mnMaxOffset;
+		/* 44h */	uint32_t mnBitMask;
+		/* 48h */	uint32_t mnStreamMask;
+		/* 4Ch */	uint32_t mnMaxMask;  // 8
+		/* 50h */	uint32_t mnSequenceMask;
 		/* 54h */	bool field_54;  // not initialized
 		/* 55h */	bool field_55;
 		/* 56h */	bool field_56;
@@ -142,9 +141,7 @@ namespace App
 		/* 48h */	eastl::hash_map<int, int> field_48;
 		/* 68h */	eastl::hash_map<int, int> field_68;
 		/* 88h */	PngEncoder mPngEncoder;
-		/* F8h */	int field_F8;
-		/* FCh */	int field_FC;
-		/* 100h */	int field_100;
+		/* F8h */	ResourceKey mCurImage;
 		/* 104h */	eastl::string16 mCellsPath;
 		/* 114h */	eastl::string16 mCreaturesPath;
 		/* 124h */	eastl::string16 mBuildingsPath;
