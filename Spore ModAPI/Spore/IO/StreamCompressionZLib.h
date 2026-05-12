@@ -5,6 +5,7 @@
 #include <EASTL\intrusive_ptr.h>
 
 #define StreamCompressionZLibPtr eastl::intrusive_ptr<IO::StreamCompressionZLib>
+#define StreamDecompressionZLibPtr eastl::intrusive_ptr<IO::StreamDecompressionZLib>
 
 namespace IO
 {
