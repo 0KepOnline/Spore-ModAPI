@@ -25,27 +25,27 @@ namespace App
 	auto_METHOD(Thumbnail_cImportExport, bool, FolderPathFromLocale,
 		Args(uint32_t instanceID, eastl::string16& dst, uint32_t tableID), Args(instanceID, dst, tableID));
 
-	auto_METHOD(Thumbnail_cImportExport, bool, SavePNG,
+	auto_METHOD(Thumbnail_cImportExport, bool, SaveMIP,
 		Args(Resource::ResourceObject* pResource, RenderWare::Raster* pImage, Resource::Database* pDBPF,
 			bool forceReplace, bool disableSteganography),
 		Args(pResource, pImage, pDBPF, forceReplace, disableSteganography));
 
-	auto_METHOD(Thumbnail_cImportExport, bool, ImportPNG,
+	auto_METHOD(Thumbnail_cImportExport, bool, ImportMIP,
 		Args(const char16_t* path, ResourceKey& key), Args(path, key));
 
-	auto_METHOD(Thumbnail_cImportExport, bool, DecodePNG,
+	auto_METHOD(Thumbnail_cImportExport, bool, DecodeMIP,
 		Args(IO::IStream* stream, ThumbnailDecodedMetadata& dstMetadata, IStreamPtr& dstDataStream),
 		Args(stream, dstMetadata, dstDataStream));
 
 	auto_METHOD_(Thumbnail_cImportExport, bool, SaveFilePaths);
 
-	auto_METHOD(Thumbnail_cImportExport, bool, ImportDirectoryPNGs,
+	auto_METHOD(Thumbnail_cImportExport, bool, ImportDirectoryMIPs,
 		Args(const eastl::string16& path, eastl::hash_set<eastl::string16>& dstSkippedPaths, int& dstCount),
 		Args(path, dstSkippedPaths, dstCount));
 
-	auto_METHOD(PngEncoder, bool, EncodePNG,
-		Args(IO::IStream* stream, int mode),
-		Args(stream, mode));
+	auto_METHOD(MIPEncoder, bool, WriteImageToStream,
+		Args(IO::IStream* stream, App::MIPEncoder::Format format),
+		Args(stream, format));
 
 
 	auto_STATIC_METHOD_(cIDGenerator, cIDGenerator*, Get);

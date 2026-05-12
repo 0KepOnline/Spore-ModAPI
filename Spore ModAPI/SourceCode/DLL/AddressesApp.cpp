@@ -407,16 +407,16 @@ namespace App
 		DefineAddress(Get, SelectAddress(0x5F7750, 0x5F79C0));
 		DefineAddress(GetFolderPath, SelectAddress(0x5F9140, 0x5F92C0));
 		DefineAddress(FolderPathFromLocale, SelectAddress(0x5F9220, 0x5F93A0));
-		DefineAddress(SavePNG, SelectAddress(0x5FA7E0, 0x5FA960));
-		DefineAddress(ImportPNG, SelectAddress(0x5FC240, 0x5FC3C0));
-		DefineAddress(DecodePNG, SelectAddress(0x5FBA10, 0x5FBB90));
+		DefineAddress(SaveMIP, SelectAddress(0x5FA7E0, 0x5FA960));
+		DefineAddress(ImportMIP, SelectAddress(0x5FC240, 0x5FC3C0));
+		DefineAddress(DecodeMIP, SelectAddress(0x5FBA10, 0x5FBB90));
 		DefineAddress(SaveFilePaths, SelectAddress(0x5F89C0, 0x5F8B60));
-		DefineAddress(ImportDirectoryPNGs, SelectAddress(0x5FC900, 0x5FCA80));
+		DefineAddress(ImportDirectoryMIPs, SelectAddress(0x5FC900, 0x5FCA80));
 	}
 
-	namespace Addresses(PngEncoder)
+	namespace Addresses(MIPEncoder)
 	{
-		DefineAddress(EncodePNG, SelectAddress(0x68E660, 0x68e190));
+		DefineAddress(WriteImageToStream, SelectAddress(0x68E660, 0x68e190));
 	}
 
 	namespace Addresses(cLocaleManager)
