@@ -241,6 +241,8 @@ namespace IO
 		DefineAddress(SetBufferSize, SelectAddress(0x6727F0, 0x67D260));
 		DefineAddress(SetCompressionHint, SelectAddress(0x672830, 0x67D2A0));
 		DefineAddress(Open, SelectAddress(0x672AA0, 0x67D510));
+		// destructor; private for ModAPI
+		DefineAddress(Dispose, SelectAddress(0x67DC30, 0x67DAD0));
 	}
 
 	namespace Addresses(StreamDecompressionZLib)
@@ -262,6 +264,8 @@ namespace IO
 		DefineAddress(SetCompressedFormat, SelectAddress(0x672950, 0x67D3D0));
 		DefineAddress(SetBufferSize, SelectAddress(0x672960, 0x67D3E0));
 		DefineAddress(Open, SelectAddress(0x672DC0, 0x67D850));
+		// destructor; private for ModAPI
+		DefineAddress(Dispose, SelectAddress(0x67DCE0, 0x67DB80));
 	}
 }
 #endif

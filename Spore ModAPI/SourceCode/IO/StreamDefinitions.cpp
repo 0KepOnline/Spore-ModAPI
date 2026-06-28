@@ -416,17 +416,9 @@ namespace IO
 			StreamCompressionZLib::Open(pOutputStream, nHint);
 	}
 
-	StreamCompressionZLib::~StreamCompressionZLib() //0067dad0
+	StreamCompressionZLib::~StreamCompressionZLib()
 	{
-		/*if (mbInited)
-		{
-			if (mbOpen)
-				Close();
-			if (mpZLibStream)
-			{
-
-			}
-		}*/
+		Dispose();
 	}
 
 	auto_METHOD_(StreamCompressionZLib, int, AddRef);
@@ -453,6 +445,9 @@ namespace IO
 
 	auto_METHOD(StreamCompressionZLib, bool, Open, Args(IStream* pOutputStream, int nHint), Args(pOutputStream, nHint));
 
+	// destructor, private for ModAPI
+	auto_METHOD_VOID_(StreamCompressionZLib, Dispose);
+
 	StreamDecompressionZLib::StreamDecompressionZLib(IStream* pInputStream)
 		: mpInputStream(NULL),
 		mFormat(kCompressedFormatZLib),
@@ -464,14 +459,9 @@ namespace IO
 		mnInputBufferSize(0x2000)
 	{}
 
-	StreamDecompressionZLib::~StreamDecompressionZLib() //0067db80
+	StreamDecompressionZLib::~StreamDecompressionZLib()
 	{
-		/*if (mbInited)
-		{
-
-		}
-		if (mpInputStream)
-			mpInputStream->Release();*/
+		Dispose();
 	}
 
 	auto_METHOD_(StreamDecompressionZLib, int, AddRef);
@@ -496,6 +486,9 @@ namespace IO
 	auto_METHOD(StreamDecompressionZLib, bool, SetBufferSize, Args(size_t nInputBufferSize), Args(nInputBufferSize));
 
 	auto_METHOD(StreamDecompressionZLib, bool, Open, Args(IStream* pInputStream), Args(pInputStream));
+
+	// destructor, private for ModAPI
+	auto_METHOD_VOID_(StreamDecompressionZLib, Dispose);
 
 	/////////////////////////////////
 

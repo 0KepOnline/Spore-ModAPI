@@ -68,6 +68,9 @@ namespace IO
 		/* 24h */	size_t mnOutputBufferSize;
 		/* 28h */	uint32_t mInputCRC;
 		/* 2Ch */	size_t mInputSize;
+	// destructor, private for ModAPI
+	private:
+		virtual void Dispose();
 	};
 	ASSERT_SIZE(StreamCompressionZLib, 0x30);
 
@@ -91,6 +94,8 @@ namespace IO
 		DeclareAddress(SetBufferSize);
 		DeclareAddress(SetCompressionHint);
 		DeclareAddress(Open);
+		// destructor, private for ModAPI
+		DeclareAddress(Dispose);
 	}
 
 	class StreamDecompressionZLib : public IStream, public RefCountTemplateAtomic
@@ -135,6 +140,9 @@ namespace IO
 		/* 18h */	void* mpZLibStream; // z_stream_s*
 		/* 1Ch */	uint8_t* mpInputBuffer;
 		/* 20h */	size_t mnInputBufferSize;
+	// destructor, private for ModAPI
+	private:
+		virtual void Dispose();
 	};
 	ASSERT_SIZE(StreamDecompressionZLib, 0x24);
 
@@ -157,5 +165,7 @@ namespace IO
 		DeclareAddress(SetCompressedFormat);
 		DeclareAddress(SetBufferSize);
 		DeclareAddress(Open);
+		// destructor, private for ModAPI
+		DeclareAddress(Dispose);
 	}
 }
