@@ -10,6 +10,7 @@
 #include <Spore\IO\StreamFixedMemory.h>
 #include <Spore\IO\StreamMemory.h>
 #include <Spore\IO\StreamNull.h>
+#include <Spore\IO\StreamCompressionZLib.h>
 #include <Spore\IO\XmlWriter.h>
 
 namespace Addresses(IO)
