@@ -1,6 +1,7 @@
 #pragma once
 
-#include <Spore\IO\IStream.h>
+#include "IStream.h"
+#include <Spore/Object.h>
 
 #define StreamCompressionZLibPtr eastl::intrusive_ptr<IO::StreamCompressionZLib>
 #define StreamDecompressionZLibPtr eastl::intrusive_ptr<IO::StreamDecompressionZLib>
@@ -68,7 +69,7 @@ namespace IO
 		/* 2Ch */	size_t mInputSize;
 	// destructor, private for ModAPI
 	private:
-		virtual void Dispose();
+		virtual void _dtor();
 	};
 	ASSERT_SIZE(StreamCompressionZLib, 0x30);
 
@@ -93,7 +94,7 @@ namespace IO
 		DeclareAddress(SetCompressionHint);
 		DeclareAddress(Open);
 		// destructor, private for ModAPI
-		DeclareAddress(Dispose);
+		DeclareAddress(_dtor);
 	}
 
 	class StreamDecompressionZLib : public IStream, public RefCountTemplateAtomic
@@ -140,7 +141,7 @@ namespace IO
 		/* 20h */	size_t mnInputBufferSize;
 	// destructor, private for ModAPI
 	private:
-		virtual void Dispose();
+		virtual void _dtor();
 	};
 	ASSERT_SIZE(StreamDecompressionZLib, 0x24);
 
@@ -164,6 +165,6 @@ namespace IO
 		DeclareAddress(SetBufferSize);
 		DeclareAddress(Open);
 		// destructor, private for ModAPI
-		DeclareAddress(Dispose);
+		DeclareAddress(_dtor);
 	}
 }

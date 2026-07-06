@@ -418,7 +418,7 @@ namespace IO
 
 	StreamCompressionZLib::~StreamCompressionZLib()
 	{
-		Dispose();
+		_dtor();
 	}
 
 	auto_METHOD_(StreamCompressionZLib, int, AddRef);
@@ -446,7 +446,7 @@ namespace IO
 	auto_METHOD(StreamCompressionZLib, bool, Open, Args(IStream* pOutputStream, int nHint), Args(pOutputStream, nHint));
 
 	// destructor, private for ModAPI
-	auto_METHOD_VOID_(StreamCompressionZLib, Dispose);
+	auto_METHOD_VOID_(StreamCompressionZLib, _dtor);
 
 	StreamDecompressionZLib::StreamDecompressionZLib(IStream* pInputStream)
 		: mpInputStream(NULL),
@@ -461,7 +461,7 @@ namespace IO
 
 	StreamDecompressionZLib::~StreamDecompressionZLib()
 	{
-		Dispose();
+		_dtor();
 	}
 
 	auto_METHOD_(StreamDecompressionZLib, int, AddRef);
@@ -488,7 +488,7 @@ namespace IO
 	auto_METHOD(StreamDecompressionZLib, bool, Open, Args(IStream* pInputStream), Args(pInputStream));
 
 	// destructor, private for ModAPI
-	auto_METHOD_VOID_(StreamDecompressionZLib, Dispose);
+	auto_METHOD_VOID_(StreamDecompressionZLib, _dtor);
 
 	/////////////////////////////////
 
