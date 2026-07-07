@@ -4,13 +4,6 @@
 
 namespace IO
 {
-	// Used to replace methods with varargs with their original addresses, as ModAPI doesn't
-	// support those (and likely won't).
-	static void _stub(IniFile* pThis)
-	{
-		*(void**)pThis = (void*)GetAddress(IniFile, _vftable);
-	}
-
 	IniFile::IniFile(const wchar_t* pPath, int optionFlags)
 		: mFileStream((char*)nullptr)
 		, mpStream(nullptr)
@@ -21,7 +14,7 @@ namespace IO
 		, mSectionPositionMap()
 		, mSectionNameMap()
 	{
-		_stub(this);
+		*(void**)this = (void*)GetAddress(IniFile, _vftable);
 		mPath[0] = L'\0';
 		IniFile::SetPath(pPath);
 	}
@@ -36,7 +29,7 @@ namespace IO
 		, mSectionNameMap()
 		, mpStream(pStream)
 	{
-		_stub(this);
+		*(void**)this = (void*)GetAddress(IniFile, _vftable);
 		mPath[0] = L'\0';
 	}
 
