@@ -330,6 +330,7 @@
     <ClInclude Include="Spore\Editors\cSPEditorVerbTrayCollection.h" />
     <ClInclude Include="Spore\Editors\cSPEditorVerbIcon.h" />
     <ClInclude Include="Spore\Editors\cSPEditorVerbIconTray.h" />
+    <ClInclude Include="Spore\IO\IniFile.h" />
     <ClInclude Include="Spore\IO\StreamCompressionZLib.h" />
     <ClInclude Include="Spore\UI\cSPUIPropertyLayout.h" />
     <ClInclude Include="Spore\Editors\cSPVerbIconRollover.h" />
@@ -1014,6 +1015,7 @@
     <ClCompile Include="SourceCode\Graphics\ThumbnailManager.cpp" />
     <ClCompile Include="SourceCode\Graphics\RenderTargets.cpp" />
     <ClCompile Include="SourceCode\Graphics\GeneratedMesh.cpp" />
+    <ClCompile Include="SourceCode\IO\IniFile.cpp" />
     <ClCompile Include="SourceCode\OpenSSL.cpp" />
     <ClCompile Include="SourceCode\Pollinator\Pollinator.cpp" />
     <ClCompile Include="SourceCode\RenderWare\Raster.cpp" />
