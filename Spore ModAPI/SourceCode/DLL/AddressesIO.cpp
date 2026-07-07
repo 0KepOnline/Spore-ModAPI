@@ -245,6 +245,7 @@ namespace IO
 		DefineAddress(Open, SelectAddress(0x672AA0, 0x67D510));
 		// destructor; private for ModAPI
 		DefineAddress(_dtor, SelectAddress(0x67DC30, 0x67DAD0));
+		DefineAddressAlias(Dispose, _dtor);
 	}
 
 	namespace Addresses(StreamDecompressionZLib)
@@ -268,6 +269,7 @@ namespace IO
 		DefineAddress(Open, SelectAddress(0x672DC0, 0x67D850));
 		// destructor; private for ModAPI
 		DefineAddress(_dtor, SelectAddress(0x67DCE0, 0x67DB80));
+		DefineAddressAlias(Dispose, _dtor);
 	}
 
 	namespace Addresses(IniFile)
