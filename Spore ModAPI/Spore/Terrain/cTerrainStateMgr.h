@@ -110,23 +110,23 @@ namespace Terrain
 		{
 			TerrainTextures();
 
-			/// From texture `0x9D8D0398.rw4`
+			/// From texture `water_foamline.rw4`
 			/* 00h */	TexturePtr mpWaterFoamCutMap;
-			/// From texture `0x11B5EE6F.rw4`
+			/// From texture `PCAwater2_0.rw4`
 			/* 04h */	TexturePtr mpWaterPCAComponent0;
-			/// From texture `0x11B5EE6E.rw4`
+			/// From texture `PCAwater2_1.rw4`
 			/* 08h */	TexturePtr mpWaterPCAComponent1;
-			/// From texture `0x84613AC8.rw4`
+			/// From texture `packed_shannon_textures.rw4`
 			/* 0Ch */	TexturePtr mpTextureAboveDetail2;
-			/// From texture `0xC66C3FCD.rw4`
+			/// From texture `seabed_grand_shallow.rw4`
 			/* 10h */	TexturePtr mpTextureBelow;
 			/// From texture `lava_detail.rw4`
 			/* 14h */	TexturePtr mpLavaDetail;
 			/// From texture `lava_ramp.rw4`
 			/* 18h */	TexturePtr mpLavaRamp;
-			/// From texture `0xA5AB24F5.rw4`
+			/// From texture `packed_detail_texture_intertiling.rw4`
 			/* 1Ch */	TexturePtr mpIceDetailNear;
-			/// From texture `0x3CEF83D5.rw4`
+			/// From texture `ice_lowfrequency.rw4`
 			/* 20h */	TexturePtr mpIceDetailMid;
 			/// From texture `ice_ramp.rw4`
 			/* 24h */	TexturePtr mpIceRamp;
@@ -138,7 +138,7 @@ namespace Terrain
 			/* 30h */	TexturePtr mpAtmospherePackedCurves;
 			/// Texture created in code with ID `AboveColorRamp`
 			/* 34h */	TexturePtr mpAboveColorRamp;
-			/// From bitmap `0xC5D262E4.8bitImage`
+			/// From bitmap `biome_noise_modifier.8bitImage`
 			/* 38h */	ResourceObjectPtr mpAboveDetailNoise;
 			/// From bitmap `planet_color_ramps_dead.32bitImage`
 			/* 3Ch */	ResourceObjectPtr mpPlanetColorRampsDead;

@@ -2292,6 +2292,18 @@
     <ClInclude Include="Spore\IO\IniFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Spore\Swarm\cDecal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spore\Terrain\cTerrainDecal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spore\Terrain\cTerrainSphereDecal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spore\Graphics\cCubeMapCoord.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SourceCode\Allocator.cpp">
