@@ -4,11 +4,12 @@
 #include <Spore\Graphics\cCubeMapCoord.h>
 #include <Spore\Graphics\ShaderData.h>
 #include <Spore\Terrain\cTerrainDecal.h>
-#include <Spore\Terrain\cTerrainSphere.h>
-#include <Spore\Terrain\cTerrainMapSet.h>
 
 namespace Terrain
 {
+	class cTerrainSphere;
+	class cTerrainMapSet;
+
 	class cTerrainSphereDecal
 		: public DefaultRefCounted
 		, public cTerrainDecal

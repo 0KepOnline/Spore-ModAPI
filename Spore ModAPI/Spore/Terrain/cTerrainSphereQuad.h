@@ -23,13 +23,13 @@
 #include <Spore\RenderWare\IndexBuffer.h>
 #include <Spore\Graphics\ILayer.h>
 #include <Spore\Terrain\cTerrainShaderMgr.h>
+#include <Spore\Terrain\cTerrainSphereDecal.h>
 #include <Spore\MathUtils.h>
 #include <EASTL\vector.h>
 
 namespace Terrain
 {
 	class cTerrainSphere;
-	class cTerrainSphereDecal;
 
 	struct TerrainTransform
 	{
