@@ -20,7 +20,7 @@
 
 #include <Spore\Simulator\SubSystem\cStrategy.h>
 #include <Spore\Simulator\cCity.h>
-#include <Spore\Terrain\ITerrain.h>
+#include <Spore\Terrain\cTerrainSphere.h>
 #include <Spore\MathUtils.h>
 
 /// Access the active Simulator planet manager.
@@ -64,12 +64,11 @@ namespace Simulator
 	public:
 		//TODO
 		/* 1Ch */	int field_1C;  // not initialized
-		// one of these is cTerrainSphere*?
-		/* 20h */	ITerrainPtr mpTerrain;
-		/* 24h */	Terrain::ITerrain* mpTerrain2;
-		/* 28h */	float field_28;
+		/* 20h */	cTerrainSpherePtr mpSphere;
+		/* 24h */	Terrain::ITerrain* field_24;
+		/* 28h */	float mWaterFraction;
 		/* 2Ch */	ResourceKey mPlanetKey;
-		/* 38h */	eastl::string16 field_38;
+		/* 38h */	eastl::string16 mPlanetName;
 		/* 48h */	bool mbAddedMessageListeners;
 		/* 4Ch */	void* mpPlanetAStarInfo;
 

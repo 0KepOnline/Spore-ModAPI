@@ -99,7 +99,7 @@ namespace Terrain
 		}
 
 	public:
-		/* 74h */	int field_74; // -1
+		/* 74h */	int field_74; // -1, index?
 		/* 78h */	cTerrainSphere* mpParentSphere;
 		/* 7Ch */	cTerrainMapSet* mpTerrainMapSet;
 		/* 80h */	eastl::vector<FaceInfo> mFaceArray;

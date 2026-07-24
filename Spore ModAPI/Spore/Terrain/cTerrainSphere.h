@@ -34,6 +34,8 @@
 #include <Spore\Terrain\TerrainShaderData.h>
 #include <Spore\Terrain\cTerrainSphereQuad.h>
 
+#define cTerrainSpherePtr eastl::intrusive_ptr<Terrain::cTerrainSphere>
+
 namespace Terrain
 {
 	enum TerrainGameMode
@@ -188,7 +190,7 @@ namespace Terrain
 		/* 20Ch */	cTerrainStateMgr* mpTerrainStateMgr;
 		/* 210h */	cWeatherManagerPtr mpWeatherManager;
 		/* 214h */	int field_214;
-		/* 218h */	eastl::vector<int> mpDecalList[4];
+		/* 218h */	eastl::vector<cTerrainSphereDecal*> mpDecalList[4];
 		/* 268h */	eastl::vector<int> mDecalIdFreeList[4];
 		/* 2B8h */	eastl::vector<int> mpDecalSegList;
 		/* 2CCh */	eastl::vector<int> mDecalSegListIdFreeList;
