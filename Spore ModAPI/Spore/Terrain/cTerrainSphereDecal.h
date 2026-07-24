@@ -4,6 +4,9 @@
 #include <Spore\Graphics\cCubeMapCoord.h>
 #include <Spore\Graphics\ShaderData.h>
 #include <Spore\Terrain\cTerrainDecal.h>
+#include <EASTL\vector.h>
+#include <Spore\Graphics\Texture.h>
+#include <Spore\MathUtils.h>
 
 namespace Terrain
 {
@@ -109,11 +112,11 @@ namespace Terrain
 		/* B4h */	int mDecalTextureID;
 		/* B8h */	uint32_t mFlags;
 		/* BCh */	Graphics::ShaderDataDecalState mShaderDataDecalState;
-		/* ECh */	Vector3 mZeroUVLoc;
-		/* F8h */	Vector4 mTexturePlane;
-		/* 108h */	Vector3 mDirectionU;
+		/* ECh */	Math::Vector3 mZeroUVLoc;
+		/* F8h */	Math::Vector4 mTexturePlane;
+		/* 108h */	Math::Vector3 mDirectionU;
 		/* 114h */	float mScaleU;
-		/* 118h */	Vector3 mDirectionV;
+		/* 118h */	Math::Vector3 mDirectionV;
 		/* 124h */	float mScaleV;
 		/* 128h */	TexturePtr mpTexture;
 	};
