@@ -140,11 +140,11 @@ namespace Terrain
 
 		struct TerrainModification
 		{
-			/* 00h */	Transform transform;
-			/* 38h */	char field_38[0x60];  // floats
-			/* 98h */	ResourceKey key;
-			/* A4h */	int field_A4;
-			/* A8h */	uint32_t modid;
+			/* 00h */	Transform mTransform;
+			/* 38h */	Math::Rectangle mBounds[6];
+			/* 98h */	ResourceKey mKey;
+			/* A4h */	uint32_t mFlagsAndBits;
+			/* A8h */	uint32_t mModId;
 		};
 		ASSERT_SIZE(TerrainModification, 0xAC);
 
