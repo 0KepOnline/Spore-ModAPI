@@ -331,6 +331,7 @@
     <ClInclude Include="Spore\Editors\cSPEditorVerbIcon.h" />
     <ClInclude Include="Spore\Editors\cSPEditorVerbIconTray.h" />
     <ClInclude Include="Spore\Graphics\cCubeMapCoord.h" />
+    <ClInclude Include="Spore\Graphics\cCubeMapIndex.h" />
     <ClInclude Include="Spore\IO\IniFile.h" />
     <ClInclude Include="Spore\IO\StreamCompressionZLib.h" />
     <ClInclude Include="Spore\Swarm\cDecal.h" />
