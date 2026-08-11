@@ -26,7 +26,7 @@ namespace UTFWin
 	//// SporeTooltipWinProc ////
 
 	SporeTooltipWinProc::SporeTooltipWinProc()
-		: mLayoutName("Tooltips")
+		: mLayoutName(u"Tooltips")
 		, mControlID(0x3754E6C)
 		, mDetailControlID(0x3754E6C)
 		, mText()
