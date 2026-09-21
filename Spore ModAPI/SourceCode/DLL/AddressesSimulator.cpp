@@ -152,6 +152,7 @@ namespace Addresses(Simulator)
 	DefineAddress(sCreatureGameUnlockCategoriesCount, SelectAddress(0x1587278, 0x1583298));
 
 	DefineAddress(CreateUFO, SelectAddress(0x102BB50, 0x102AC60));
+	DefineAddress(SpawnUFO, SelectAddress(0x102BBB0, 0x102ACC0));
 
 	DefineAddress(SpawnNpcTribe, SelectAddress(0xC92860, 0xC932F0));
 	DefineAddress(sTribeFishHotSpots_ptr, SelectAddress(0x157EB90 ,0x157ABB0));
@@ -369,6 +370,8 @@ namespace Simulator
 		DefineAddress(UpdateAndGetColor, SelectAddress(0xC325F0, 0xC32E30));
 		DefineAddress(AddStarOwnership, SelectAddress(0xC33AB0, 0xC34300));
 		DefineAddress(RequireHomePlanet, SelectAddress(0xC30F90, 0xC31890));
+		DefineAddress(Destroy, SelectAddress(0xC33C30, 0xC34480));
+		DefineAddress(GetWeaponryLevel, SelectAddress(0xC31000, 0xC31900));
 	}
 
 	namespace Addresses(cEnergyRepairToolStrategy)
@@ -548,6 +551,8 @@ namespace Simulator
 		DefineAddress(ApplyRelationship, SelectAddress(0xD054E0, 0xD06280));
 		DefineAddress(RelationshipExists, SelectAddress(0xD010C0, 0xD01B90));
 		DefineAddress(GetRelationshipEventValue, SelectAddress(0xD010F0, 0xD01BC0));
+		DefineAddress(CalculateRelationship, SelectAddress(0xCFFF60, 0xD00950));
+		DefineAddress(CalculateRelationshipAbsolute, SelectAddress(0xD04CC0, 0xD05A60));
 	}
 
 	namespace Addresses(cGameBehaviorManager) 
@@ -634,6 +639,9 @@ namespace Simulator
 		DefineAddress(GenerateSolSystem, SelectAddress(0xBB1A00, 0xBB2BF0));
 		DefineAddress(RequirePlanetsForStar, SelectAddress(0xBB3AA0, 0xBB4C90));
 		DefineAddress(GeneratePlanetsForStar, SelectAddress(0xBB30B0, 0xBB42A0));
+		DefineAddress(GetDefaultTerrainThemeFlora, SelectAddress(0xBABFF0, 0xBAD210));
+		DefineAddress(PickPlantSpecies, SelectAddress(0xBAB7A0, 0xBAC9C0));
+		DefineAddress(PickAnimalSpecies, SelectAddress(0xBABC40, 0xBACE60));
 	}
 
 	namespace Addresses(cSpaceTradeRouteManager)
@@ -1181,6 +1189,7 @@ namespace Simulator
 		DefineAddress(SetRareAsFound, SelectAddress(0x1040820, 0x103FBB0));
 		DefineAddress(GenerateNPCStore, SelectAddress(0x103F560, 0x103E8F0));
 		DefineAddress(CreateTradingObject, SelectAddress(0x103B470, 0x103A490));
+		DefineAddress(BuildSpiceCommodities, SelectAddress(0x0103D650, 0x0103C950));
 	}
 
 	namespace Addresses(cScenarioEditModeDisplayStrategy) {
